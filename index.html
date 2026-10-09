@@ -335,6 +335,24 @@ body::after{opacity:var(--grain-strength);pointer-events:none;background-size:18
 @media(max-width:650px){:root{--grain-strength:.04}.hero-photo::after,.product-photo::after{opacity:.045}}
 @media(forced-colors:active){body::after,.hero::after,.rust::after,.hero-photo::after,.product-photo::after,.era-photo::after{display:none}}
 
+
+/* Supplied Kelly texture assets are the material source of truth. */
+:root{--kelly-paper:url('https://lh3.googleusercontent.com/d/1us-iuAWg9Cu-VifXgRS_8N_v9X1V8bPj=w1672');--kelly-warm-paper:url('https://lh3.googleusercontent.com/d/1OdtQkz8g8z2S4QfvIYMHO_kW2FgxfMj3=w1000');--kelly-red-paper:url('https://lh3.googleusercontent.com/d/114HpNdRPXg4otR15vk9MeYy26kIPhCRL=w1672');--kelly-grain:url('https://lh3.googleusercontent.com/d/1sAcEJYRysxWDpcqSmiQe1Al_I09nFD2N=w1448');--grain-strength:.04}
+body::after{background-image:var(--kelly-grain);background-size:500px auto;background-repeat:repeat;opacity:var(--grain-strength);mix-blend-mode:multiply;pointer-events:none;z-index:55}
+.paper,.memory-strip,.memory-strip .spirit,.social-note{background-color:#f5efe3;background-image:var(--kelly-paper);background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero{background-color:#b52822;background-image:url('https://lh3.googleusercontent.com/d/1Yt8dO7pmPs2D1FUYGM4QLMi6pCPjy-BQ=w1672');background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero::before,.hero::after,.rust::after{display:none}
+.hero-photo img,.product-photo img,.era-photo img{filter:none}
+.hero-photo::after,.product-photo::after,.era-photo::after{display:none}
+.hero-photo,.product-photo,.era-photo{background-color:var(--cream);background-image:none}
+.scrapbook{background-image:var(--kelly-red-paper);background-size:cover;background-position:center;background-repeat:no-repeat}
+.scrapbook-base{display:none}
+.scrapbook-note,.era-photo figcaption,.hero-photo::before{background-image:var(--kelly-warm-paper);background-size:cover;background-position:center}
+.memory-strip .spirit::after{width:55%;height:auto;aspect-ratio:1086/1448;max-height:90%;background-image:url('https://lh3.googleusercontent.com/d/1GA2AUoc0GPFuNQ0LHdUxlojHaiwNmQVE=w1086');background-size:contain;background-position:right bottom;background-repeat:no-repeat;opacity:.48;pointer-events:none}
+.button,.social-link{background-image:none}
+@media(max-width:800px){.hero{background-image:url('https://lh3.googleusercontent.com/d/1FVfoVfEOdyrYlMhHJkCvELgd52xCDeSg=w900');background-position:50% 45%}.memory-strip .spirit::after{width:45%;opacity:.4}}
+@media(max-width:650px){:root{--grain-strength:.03}}
+
 </style><link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"><link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"></head>
 <body><a class="skip" href="#main" data-i18n="skip">Lewati ke konten</a><div class="site">
 <header class="paper"><nav class="nav" aria-label="Navigasi utama"><button class="menu" aria-controls="navlinks" aria-expanded="false" data-i18n="menu">Menu</button><div class="navlinks" id="navlinks"><a href="#about" data-i18n="navAbout">Cerita Kami</a><a href="#products" data-i18n="navProducts">Produk Klasik</a><a href="#philosophy" data-i18n="navPhilosophy">Sahabat Kelly</a></div><a class="brand" href="#" aria-label="Kelly"><img class="logo" src="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600" alt="Kelly" width="176" height="75"></a><div class="nav-right"><div class="languages" role="group" aria-label="Bahasa / Language"><button data-lang="id" aria-label="Bahasa Indonesia" aria-pressed="true" lang="id">ID</button><span aria-hidden="true">/</span><button data-lang="en" aria-label="English" aria-pressed="false" lang="en">EN</button></div></div></nav></header>
