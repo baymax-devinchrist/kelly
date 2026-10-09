@@ -310,6 +310,31 @@ body::after{background-image:var(--analog-grain);background-size:180px 180px;opa
 @media(max-width:800px){.hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:42px 7% 30px}.hero h1{font-size:clamp(3.6rem,11.5vw,6rem);margin-bottom:28px}.hero h1>span+span{margin-top:8px}.hero-copy>p{font-size:.97rem;max-width:540px;line-height:1.8;margin-bottom:26px}.hero-copy>p span{display:inline;white-space:normal}.hero-copy>p span+span:before{content:' '}.hero .button{font-size:.72rem;padding:14px 23px}.hero-visual{position:relative;padding:26px 8% 122px 19%;width:100%;max-width:670px;justify-self:center}.hero-photo{padding:9px 9px 13px}.hero-photo img{aspect-ratio:1.06}.hero-photo:before{height:30px;top:-15px}.hero-photo:after{inset:9px 9px 13px}.hero .anniversary-seal{left:3%;top:auto;bottom:92px;width:34%;max-width:225px}.hero-note{left:38%;bottom:28px;font-size:2.3rem}.hero::before{width:170%;height:48%;left:-40%;bottom:-19%}}
 @media(prefers-reduced-motion:reduce){.hero .button{transition:none}}
 
+
+/* Global analog system: small reusable SVG tiles, crisp type, era-specific photography. */
+:root{--grain-strength:.055;--paper-fiber:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22240%22%20height%3D%22240%22%3E%3Cfilter%20id%3D%22p%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.045%20.55%22%20numOctaves%3D%223%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20opacity%3D%22.065%22%20filter%3D%22url(%23p)%22%2F%3E%3C%2Fsvg%3E");--print-noise:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22192%22%20height%3D%22192%22%3E%3Cfilter%20id%3D%22p%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.14%22%20numOctaves%3D%222%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20opacity%3D%22.055%22%20filter%3D%22url(%23p)%22%2F%3E%3C%2Fsvg%3E")}
+body::after{opacity:var(--grain-strength);pointer-events:none;background-size:180px 180px}
+.paper{background-image:var(--paper-fiber),var(--print-noise),radial-gradient(ellipse at 0 0,#c69a4610,transparent 65%);background-size:240px 240px,192px 192px,100% 100%}
+.hero::after,.rust::after{background-image:var(--print-noise);opacity:.7;mix-blend-mode:soft-light}
+.social-note{background-image:var(--paper-fiber),var(--print-noise)}
+.hero-photo,.product-photo,.era-photo,.scrapbook-note{background-image:var(--paper-fiber)}
+.hero-photo img,.product-photo img{filter:contrast(.965) saturate(.97) brightness(1.025)}
+.hero-photo::after{background-image:var(--analog-grain),linear-gradient(135deg,#ffe3b326,transparent 55%,#a4472310);background-size:180px 180px,100% 100%;opacity:.065;mix-blend-mode:soft-light}
+.product-photo::after{content:'';position:absolute;inset:7px;pointer-events:none;background-image:var(--analog-grain),linear-gradient(135deg,#f8dbaa25,transparent 60%);background-size:180px 180px,100% 100%;mix-blend-mode:soft-light;opacity:.065}
+.era-1980 img{filter:contrast(.93) saturate(.94) brightness(1.035)}
+.era-2000 img{filter:contrast(1.015) saturate(.97) brightness(1.01)}
+.era-2020 img{filter:contrast(.985) saturate(.985) brightness(1.01)}
+.era-photo::after{content:'';position:absolute;inset:3.4% 3.4% 13%;background-image:var(--analog-grain);background-size:180px 180px;mix-blend-mode:soft-light;opacity:.045;pointer-events:none}
+.era-1980::after{opacity:.09}.era-2000::after{opacity:.06}.era-2020::after{opacity:.025}
+.hero-photo::before,.era-photo figcaption{background-image:var(--paper-fiber),var(--print-noise)}
+.scrapbook-heart{opacity:.9;filter:drop-shadow(.6px .6px 0 #c4674933)}
+.scrapbook-note span,.story-signature{ text-shadow:.7px .7px 0 #a4482320}
+.ticker b{opacity:.88;text-shadow:.7px .5px 0 #9b392825}
+.button,.social-link{background-image:var(--paper-fiber)}
+.social-link{box-shadow:4px 4px 0 #984c393d}
+@media(max-width:650px){:root{--grain-strength:.04}.hero-photo::after,.product-photo::after{opacity:.045}}
+@media(forced-colors:active){body::after,.hero::after,.rust::after,.hero-photo::after,.product-photo::after,.era-photo::after{display:none}}
+
 </style><link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"><link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"></head>
 <body><a class="skip" href="#main" data-i18n="skip">Lewati ke konten</a><div class="site">
 <header class="paper"><nav class="nav" aria-label="Navigasi utama"><button class="menu" aria-controls="navlinks" aria-expanded="false" data-i18n="menu">Menu</button><div class="navlinks" id="navlinks"><a href="#about" data-i18n="navAbout">Cerita Kami</a><a href="#products" data-i18n="navProducts">Produk Klasik</a><a href="#philosophy" data-i18n="navPhilosophy">Sahabat Kelly</a></div><a class="brand" href="#" aria-label="Kelly"><img class="logo" src="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600" alt="Kelly" width="176" height="75"></a><div class="nav-right"><div class="languages" role="group" aria-label="Bahasa / Language"><button data-lang="id" aria-label="Bahasa Indonesia" aria-pressed="true" lang="id">ID</button><span aria-hidden="true">/</span><button data-lang="en" aria-label="English" aria-pressed="false" lang="en">EN</button></div></div></nav></header>
