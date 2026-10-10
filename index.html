@@ -396,6 +396,21 @@ header,.hero,.ticker,.story-grid,.story-main,.memory-strip,.social-note,footer{b
 
 
 @media(min-width:651px) and (max-width:800px){.menu{display:block;grid-column:1;grid-row:1;justify-self:start;padding:10px 0}.navlinks{display:none;position:absolute;left:0;right:0;top:95px;height:auto;padding:22px 6%;grid-column:auto;grid-row:auto;flex-direction:column;align-items:flex-start;gap:22px;background:var(--cream)}.navlinks.open{display:flex}.navlinks a{font-size:.8rem;letter-spacing:.09em}.navlinks::before,.nav-right::before{display:none}.nav-right{height:auto;padding-top:0}}
+
+/* Focused hero title and tactile heritage ribbon. */
+.hero h1{line-height:1.12;margin-bottom:32px}
+.hero h1 .anniversary-line{display:block;position:relative;width:max-content;max-width:100%}
+.hero h1>span+span{margin-top:12px}
+.hero .anniversary-seal{position:absolute;left:calc(100% + 10px);top:-1.05em;right:auto;bottom:auto;width:clamp(96px,14.3vw,217px);max-width:none;height:auto;transform:rotate(-7deg);pointer-events:none}
+.hero h1 em{font-size:1.1em}
+.hero::after{display:block;content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(90,16,12,.16),transparent 63%);opacity:1;mix-blend-mode:multiply;pointer-events:none;z-index:-1}
+.hero-photo::before{width:25%;height:42px;left:37%;top:-22px;background:transparent url('https://lh3.googleusercontent.com/d/1kkIblyDGM2s1GW-mrX8kTYM9vbSvPkc3=w1000') center/100% 210% no-repeat;clip-path:none;box-shadow:none;filter:drop-shadow(1px 2px 0 #56372022);transform:rotate(6deg)}
+.ticker.paper{position:relative;isolation:isolate;z-index:3;width:94%;max-width:1600px;margin:-10px auto 18px;padding:27px 5%;min-height:84px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:16px;text-align:center;background:none;border:0;overflow:visible}
+.ticker::before{content:'';position:absolute;inset:0;z-index:-1;background:url('https://lh3.googleusercontent.com/d/1rn9odaJs96WVDyUcaedpTxiY5apxSfzj=w2172') center/100% 235% no-repeat;filter:drop-shadow(6px 6px 0 rgba(110,35,25,.18));pointer-events:none}
+.ticker span{white-space:nowrap}.ticker b{justify-self:center}
+@media(max-width:1100px) and (min-width:801px){.hero .anniversary-seal{width:14.3vw}.ticker.paper{gap:10px;font-size:.6rem}}
+@media(max-width:800px){.hero h1>span+span{margin-top:12px}.hero .anniversary-seal{width:clamp(76px,19.5vw,130px);top:-.58em;left:calc(100% + 9px)}.hero-inner{padding-top:55px}.hero-photo::before{height:34px;top:-17px}.ticker.paper{font-size:.56rem;gap:10px;padding-inline:4%}}
+@media(max-width:500px){.hero h1>span+span{margin-top:10px}.ticker.paper{grid-template-columns:1fr auto 1fr;row-gap:8px;padding:22px 8%;min-height:104px;width:94%}.ticker .last{display:block}.ticker b:nth-child(4){display:none}.ticker span:nth-child(5){grid-column:1;grid-row:2}.ticker b:nth-child(6){grid-column:2;grid-row:2}.ticker span:nth-child(7){grid-column:3;grid-row:2}}
 </style><link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"><link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"></head>
 <body><a class="skip" href="#main" data-i18n="skip">Lewati ke konten</a><div class="site">
 <header class="paper"><nav class="nav" aria-label="Navigasi utama"><button class="menu" aria-controls="navlinks" aria-expanded="false" data-i18n="menu">Menu</button><div class="navlinks" id="navlinks"><a href="#about" data-i18n="navAbout">Cerita Kami</a><a href="#products" data-i18n="navProducts">Produk Klasik</a><a href="#philosophy" data-i18n="navPhilosophy">Sahabat Kelly</a></div><a class="brand" href="#" aria-label="Kelly"><img class="logo" src="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600" alt="Kelly" width="176" height="75"></a><div class="nav-right"><div class="languages" role="group" aria-label="Bahasa / Language"><button data-lang="id" aria-label="Bahasa Indonesia" aria-pressed="true" lang="id">ID</button><span aria-hidden="true">/</span><button data-lang="en" aria-label="English" aria-pressed="false" lang="en">EN</button></div></div></nav></header>
