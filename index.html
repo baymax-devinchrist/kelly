@@ -454,6 +454,16 @@ header,.hero,.ticker,.story-grid,.story-main,.memory-strip,.social-note,footer{b
 @keyframes kelly-detail-reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 .product details[open]>p{animation:kelly-detail-reveal 320ms ease-out both}
 @media(prefers-reduced-motion:reduce){.product details[open]>p{animation:none}}
+
+/* Desktop hero scale and pressed-ink decorative lettering. */
+.navlinks::before,.nav-right::before{display:none}
+.story-signature,#philosophy-title em{text-shadow:-1px -1px 1px rgba(78,28,16,.65),1px 2px 0 rgba(255,248,221,.95),0 1px 0 rgba(255,248,221,.7)}
+@media(min-width:801px){
+.hero h1{font-size:clamp(3.6rem,6.7vw,6.7rem);margin-bottom:36px}
+.hero-copy>p{font-size:clamp(1rem,1.45vw,1.35rem);line-height:1.7;max-width:550px;margin-bottom:36px}
+.hero-copy>p span{display:inline;white-space:normal}
+.hero .button{font-size:clamp(.85rem,1.2vw,1.1rem);padding:20px 32px;gap:30px}
+}
 </style><link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"><link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"></head>
 <body><a class="skip" href="#main" data-i18n="skip">Lewati ke konten</a><div class="site">
 <header class="paper"><nav class="nav" aria-label="Navigasi utama"><button class="menu" aria-controls="navlinks" aria-expanded="false" data-i18n="menu">Menu</button><div class="navlinks" id="navlinks"><a href="#about" data-i18n="navAbout">Cerita Kami</a><a href="#products" data-i18n="navProducts">Produk Klasik</a><a href="#philosophy" data-i18n="navPhilosophy">Sahabat Kelly</a></div><a class="brand" href="#" aria-label="Kelly"><img class="logo" src="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600" alt="Kelly" width="176" height="75"></a><div class="nav-right"><div class="languages" role="group" aria-label="Bahasa / Language"><button data-lang="id" aria-label="Bahasa Indonesia" aria-pressed="true" lang="id">ID</button><span aria-hidden="true">/</span><button data-lang="en" aria-label="English" aria-pressed="false" lang="en">EN</button></div></div></nav></header>
