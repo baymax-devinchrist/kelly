@@ -449,6 +449,11 @@ header,.hero,.ticker,.story-grid,.story-main,.memory-strip,.social-note,footer{b
 .ticker.paper{margin-bottom:0}
 .reasons{grid-template-columns:max-content minmax(0,1fr);column-gap:28px}
 @media(max-width:1000px){.reasons{column-gap:22px}}
+
+/* Gentle reveal for the native, keyboard-accessible product details. */
+@keyframes kelly-detail-reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.product details[open]>p{animation:kelly-detail-reveal 320ms ease-out both}
+@media(prefers-reduced-motion:reduce){.product details[open]>p{animation:none}}
 </style><link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"><link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600"></head>
 <body><a class="skip" href="#main" data-i18n="skip">Lewati ke konten</a><div class="site">
 <header class="paper"><nav class="nav" aria-label="Navigasi utama"><button class="menu" aria-controls="navlinks" aria-expanded="false" data-i18n="menu">Menu</button><div class="navlinks" id="navlinks"><a href="#about" data-i18n="navAbout">Cerita Kami</a><a href="#products" data-i18n="navProducts">Produk Klasik</a><a href="#philosophy" data-i18n="navPhilosophy">Sahabat Kelly</a></div><a class="brand" href="#" aria-label="Kelly"><img class="logo" src="https://lh3.googleusercontent.com/d/18qZiD19-b_8HH10DFraS4xcvhkRm0Z4V=w1600" alt="Kelly" width="176" height="75"></a><div class="nav-right"><div class="languages" role="group" aria-label="Bahasa / Language"><button data-lang="id" aria-label="Bahasa Indonesia" aria-pressed="true" lang="id">ID</button><span aria-hidden="true">/</span><button data-lang="en" aria-label="English" aria-pressed="false" lang="en">EN</button></div></div></nav></header>
